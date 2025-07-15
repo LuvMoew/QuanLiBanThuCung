@@ -1,0 +1,142 @@
+<RCC>
+  <qresource>
+    <file>Icons/1.png</file>
+    <file>Icons/2.png</file>
+    <file>Icons/3.png</file>
+    <file>Icons/4.png</file>
+    <file>Icons/5.png</file>
+    <file>Icons/6.png</file>
+    <file>Icons/7.png</file>
+    <file>Icons/8.png</file>
+    <file>Icons/9.png</file>
+    <file>Icons/10.png</file>
+    <file>Icons/11.png</file>
+    <file>Icons/12.png</file>
+    <file>Icons/13.png</file>
+    <file>Icons/14.png</file>
+    <file>Icons/add.png</file>
+    <file>Icons/analytics (1).png</file>
+    <file>Icons/analytics.png</file>
+    <file>Icons/ask (1).png</file>
+    <file>Icons/ask.png</file>
+    <file>Icons/back.png</file>
+    <file>Icons/bars-solid.svg</file>
+    <file>Icons/bell (1).png</file>
+    <file>Icons/bell.png</file>
+    <file>Icons/bell-boy (1).png</file>
+    <file>Icons/bell-boy.png</file>
+    <file>Icons/bill (1).png</file>
+    <file>Icons/bill.png</file>
+    <file>Icons/bin (1).png</file>
+    <file>Icons/bone-solid.svg</file>
+    <file>Icons/book.png</file>
+    <file>Icons/booking (1).png</file>
+    <file>Icons/booking.png</file>
+    <file>Icons/businessman.png</file>
+    <file>Icons/calendar.png</file>
+    <file>Icons/cancellation.png</file>
+    <file>Icons/cash-payment.png</file>
+    <file>Icons/change.png</file>
+    <file>Icons/check-list (1).png</file>
+    <file>Icons/check-list.png</file>
+    <file>Icons/circle-loader.gif</file>
+    <file>Icons/clipboard.png</file>
+    <file>Icons/clock.png</file>
+    <file>Icons/close (2).png</file>
+    <file>Icons/close (4).png</file>
+    <file>Icons/customer (1).png</file>
+    <file>Icons/customer.png</file>
+    <file>Icons/delete (1).png</file>
+    <file>Icons/delete (2).png</file>
+    <file>Icons/delete.png</file>
+    <file>Icons/dismiss.png</file>
+    <file>Icons/dog-solid.svg</file>
+    <file>Icons/e33561103244921.5f48a931911a0.png</file>
+    <file>Icons/eating.png</file>
+    <file>Icons/edit.png</file>
+    <file>Icons/edit_note_FILL1_wght700_GRAD0_opsz40.png</file>
+    <file>Icons/elearning.png</file>
+    <file>Icons/email (1).png</file>
+    <file>Icons/email.png</file>
+    <file>Icons/equalizer.png</file>
+    <file>Icons/ERD.png</file>
+    <file>Icons/error.png</file>
+    <file>Icons/excel.png</file>
+    <file>Icons/expenses.png</file>
+    <file>Icons/export.png</file>
+    <file>Icons/file.png</file>
+    <file>Icons/flag.png</file>
+    <file>Icons/food.png</file>
+    <file>Icons/grocery.png</file>
+    <file>Icons/hide.png</file>
+    <file>Icons/hired.png</file>
+    <file>Icons/house-solid.svg</file>
+    <file>Icons/import (1).png</file>
+    <file>Icons/information-desk.png</file>
+    <file>Icons/inventory (1).png</file>
+    <file>Icons/inventory.png</file>
+    <file>Icons/item3.png</file>
+    <file>Icons/job.png</file>
+    <file>Icons/left-arrow.png</file>
+    <file>Icons/levels.png</file>
+    <file>Icons/logo.jpeg</file>
+    <file>Icons/logo2.jfif</file>
+    <file>Icons/logopet.avif</file>
+    <file>Icons/loupe (1).png</file>
+    <file>Icons/mail.png</file>
+    <file>Icons/menu (1).png</file>
+    <file>Icons/menu (2).png</file>
+    <file>Icons/menu (3).png</file>
+    <file>Icons/menu.png</file>
+    <file>Icons/minus.png</file>
+    <file>Icons/no-food.png</file>
+    <file>Icons/notepad (1).png</file>
+    <file>Icons/notepad.png</file>
+    <file>Icons/one.png</file>
+    <file>Icons/online-order.png</file>
+    <file>Icons/pass.png</file>
+    <file>Icons/pencil.png</file>
+    <file>Icons/petlogo.webp</file>
+    <file>Icons/petlogoshop.jpeg</file>
+    <file>Icons/pet-shop-logo-vector.jpg</file>
+    <file>Icons/pets-shop-logo.jpg</file>
+    <file>Icons/pisces (1).png</file>
+    <file>Icons/plus.png</file>
+    <file>Icons/product.png</file>
+    <file>Icons/profile.png</file>
+    <file>Icons/profile1.jpg</file>
+    <file>Icons/profile2.jpg</file>
+    <file>Icons/profit.png</file>
+    <file>Icons/rating.png</file>
+    <file>Icons/receipt (1).png</file>
+    <file>Icons/receipt (2).png</file>
+    <file>Icons/receipt.png</file>
+    <file>Icons/refresh.png</file>
+    <file>Icons/remove.png</file>
+    <file>Icons/rename.png</file>
+    <file>Icons/reset-password (1).png</file>
+    <file>Icons/reset-password.png</file>
+    <file>Icons/restaurant (1).png</file>
+    <file>Icons/revenue.png</file>
+    <file>Icons/right-from-bracket-solid.svg</file>
+    <file>Icons/search.png</file>
+    <file>Icons/selling.png</file>
+    <file>Icons/shopping-cart.png</file>
+    <file>Icons/stock.png</file>
+    <file>Icons/success.png</file>
+    <file>Icons/test.png</file>
+    <file>Icons/three.png</file>
+    <file>Icons/two.png</file>
+    <file>Icons/user (2).png</file>
+    <file>Icons/user (3).png</file>
+    <file>Icons/user-solid.svg</file>
+    <file>Icons/users-rectangle-solid.svg</file>
+    <file>Icons/user-tie-solid.svg</file>
+    <file>Icons/view.png</file>
+    <file>Icons/voucher.png</file>
+    <file>Icons/warehouse (2).png</file>
+    <file>Icons/warehouse.png</file>
+    <file>Icons/warning (1).png</file>
+    <file>Icons/warning (2).png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1048</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>String Pet Store</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #fef8ec;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="leftMenu">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fef8ec;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="logoLabel">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #e2b4b7;
+border-radius: 50%;</string>
+         </property>
+         <property name="text">
+          <string>TRINGPET</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnHome">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid #e2b4b7; /* Viền nhẹ nhàng */
+    border-radius: 5px; /* Bo góc */
+    font-size: 14px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e2b4b7;
+    color: white; /* Đổi màu chữ khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #D9534F; /* Màu khi bấm */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Trang chủ</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/home.png</normaloff>icons/home.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnPets">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid #e2b4b7; /* Viền nhẹ nhàng */
+    border-radius: 5px; /* Bo góc */
+    font-size: 14px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e2b4b7;
+    color: white; /* Đổi màu chữ khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #D9534F; /* Màu khi bấm */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Thú cưng</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/pets.png</normaloff>icons/pets.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnCustomers">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid #e2b4b7; /* Viền nhẹ nhàng */
+    border-radius: 5px; /* Bo góc */
+    font-size: 14px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e2b4b7;
+    color: white; /* Đổi màu chữ khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #D9534F; /* Màu khi bấm */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Khách hàng</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/customers.png</normaloff>icons/customers.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnPayment">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid #e2b4b7; /* Viền nhẹ nhàng */
+    border-radius: 5px; /* Bo góc */
+    font-size: 14px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e2b4b7;
+    color: white; /* Đổi màu chữ khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #D9534F; /* Màu khi bấm */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Thanh toán</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/payment.png</normaloff>icons/payment.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnStaff">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid #e2b4b7; /* Viền nhẹ nhàng */
+    border-radius: 5px; /* Bo góc */
+    font-size: 14px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e2b4b7;
+    color: white; /* Đổi màu chữ khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #D9534F; /* Màu khi bấm */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Nhân viên</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/staff.png</normaloff>icons/staff.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnLogout">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    text-align: center;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid #e2b4b7; /* Viền nhẹ nhàng */
+    border-radius: 5px; /* Bo góc */
+    font-size: 14px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+}
+
+QPushButton:hover {
+    background-color: #e2b4b7;
+    color: white; /* Đổi màu chữ khi hover */
+}
+
+QPushButton:pressed {
+    background-color: #D9534F; /* Màu khi bấm */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Đăng xuất</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/logout.png</normaloff>icons/logout.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="mainContent">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(254, 244, 224);
+border-radius: 15px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="mainContentLayout">
+       <item>
+        <widget class="QFrame" name="headerFrame">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #FCD9D9;
+border-radius: 20px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="storeNameLabel">
+            <property name="styleSheet">
+             <string notr="true">font-size: 18px;
+font-weight: bold;</string>
+            </property>
+            <property name="text">
+             <string>String Pet Store</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="sloganLabel1">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Thịt chó thì phải có riềng </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="sloganLabel2">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Thịt lợn thì phải có riêng món hành</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="sloganLabel3">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Thịt gà cần phải lá chanh</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="sloganLabel4">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Tía tô cà chuối mới thành ba ba.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="dashboardFrame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QFrame" name="revenueFrame">
+            <property name="styleSheet">
+             <string notr="true">background-color: #a0c9c3;
+border-radius: 15px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QLabel" name="revenueLabel">
+               <property name="text">
+                <string>Doanh thu</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="revenueProgress">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar {
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #efffff;
+	color: #fff;
+}
+QProgressBar::chunk {
+    background-color: #657d81;
+    border-radius: 10px;
+}</string>
+               </property>
+               <property name="value">
+                <number>65</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="revenueAmount">
+               <property name="styleSheet">
+                <string notr="true">font-size: 20px;
+font-weight: bold;</string>
+               </property>
+               <property name="text">
+                <string>1905000</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="dashboardFrame2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QFrame" name="birdFrame">
+            <property name="styleSheet">
+             <string notr="true">background-color: #e2b4b7;
+border-radius: 15px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLabel" name="birdLabel">
+               <property name="font">
+                <font>
+                 <family>MS Shell Dlg 2</family>
+                 <pointsize>10</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Chim:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="birdIcon">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>icons/bird.png</pixmap>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="birdCount">
+               <property name="styleSheet">
+                <string notr="true">font-size: 24px;
+font-weight: bold;</string>
+               </property>
+               <property name="text">
+                <string>1</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="dogFrame">
+            <property name="styleSheet">
+             <string notr="true">background-color: #a0c9c3;
+border-radius: 15px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QLabel" name="dogLabel">
+               <property name="font">
+                <font>
+                 <family>MS Shell Dlg 2</family>
+                 <pointsize>10</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Chó:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="dogIcon">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>icons/dog.png</pixmap>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="dogCount">
+               <property name="styleSheet">
+                <string notr="true">font-size: 24px;
+font-weight: bold;</string>
+               </property>
+               <property name="text">
+                <string>2</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="catFrame">
+            <property name="styleSheet">
+             <string notr="true">background-color: #f3c2c5;
+border-radius: 15px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QLabel" name="catLabel">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Mèo:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="catIcon">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>icons/cat.png</pixmap>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="catCount">
+               <property name="styleSheet">
+                <string notr="true">font-size: 24px;
+font-weight: bold;</string>
+               </property>
+               <property name="text">
+                <string>2</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="fishFrame">
+            <property name="styleSheet">
+             <string notr="true">background-color: #97b8ba;
+border-radius: 15px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QLabel" name="fishLabel">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Cá:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="fishIcon">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>icons/fish.png</pixmap>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="fishCount">
+               <property name="styleSheet">
+                <string notr="true">font-size: 24px;
+font-weight: bold;</string>
+               </property>
+               <property name="text">
+                <string>1</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

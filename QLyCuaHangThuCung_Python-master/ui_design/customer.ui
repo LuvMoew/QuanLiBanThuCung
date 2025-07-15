@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomerWindow</class>
+ <widget class="QMainWindow" name="CustomerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1051</width>
+    <height>699</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Quản lý Khách Hàng</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow {
+        background-color: #f5f6fa;
+    }
+    QWidget#centralWidget {
+        background-color: rgb(254, 248, 236);
+    }
+    QGroupBox {
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: none;
+        margin-top: 15px;
+    }
+    QGroupBox::title {
+        color: #2d3436;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px;
+    }
+    QLabel {
+        color: #2d3436;
+        font-size: 13px;
+        font-weight: bold;
+        background-color: white;
+    }
+    QLineEdit, QTextEdit {
+        padding: 8px;
+        border: 2px solid #dfe6e9;
+        border-radius: 6px;
+        background-color: #ffffff;
+        font-size: 13px;
+        min-height: 20px;
+    }
+    QLineEdit:focus, QTextEdit:focus {
+        border: 2px solid #74b9ff;
+    }
+    QPushButton {
+        padding: 8px 15px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: bold;
+        min-width: 80px;
+        color: #333;
+    }
+    QPushButton#addButton {
+        background-color: #9ac1bb;
+        color: #333;
+        border: none;
+    }
+    QPushButton#addButton:hover {
+        background-color: #84a6a0;
+    }
+    QPushButton#fixButton {
+        background-color: #92b9e3;
+        color: #333;
+        border: none;
+    }
+    QPushButton#fixButton:hover {
+        background-color: #7fa1c5;
+    }
+    QPushButton#deleteButton {
+        background-color: #ef495a;
+        color: #333;
+        border: none;
+    }
+    QPushButton#deleteButton:hover {
+        background-color: #dc4355;
+    }
+    QPushButton#imgpathButton {
+        background-color: #d9adb0;
+        color: #333;
+        border: none;
+    }
+    QPushButton#imgpathButton:hover {
+        background-color: #cc999e;
+    }
+	QPushButton#excelButton {
+        background-color: #00efaf;
+        color: #333;
+        border: none;
+    }
+    QPushButton#excelButton:hover {
+        background-color: #00d095;
+    }
+    QTableWidget {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        gridline-color: #dfe6e9;
+    }
+    QTableWidget::item {
+        padding: 5px;
+    }
+    QHeaderView::section {
+        background-color: #f5f6fa;
+        padding: 5px;
+        border: none;
+        font-weight: bold;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QGroupBox" name="customerInfoGroup">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="topMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="idLabel">
+           <property name="text">
+            <string>Mã KH:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="idInput">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="placeholderText">
+            <string>Tự động tạo</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="nameLabel">
+           <property name="text">
+            <string>Họ và tên:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="nameInput">
+           <property name="placeholderText">
+            <string>Nhập họ và tên đầy đủ</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="phoneLabel">
+           <property name="text">
+            <string>Số điện thoại:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="phoneInput">
+           <property name="placeholderText">
+            <string>Nhập số điện thoại</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="emailLabel">
+           <property name="text">
+            <string>Email:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="emailInput">
+           <property name="placeholderText">
+            <string>Nhập địa chỉ email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="addressLabel">
+           <property name="text">
+            <string>Địa chỉ:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QTextEdit" name="addressInput">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="placeholderText">
+            <string>Nhập địa chỉ đầy đủ</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="startDateLabel">
+           <property name="text">
+            <string>Ngày đăng ký:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QDateEdit" name="registerDateEdit">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="photoLabel">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>298</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+           background-color: #dfe6e9;
+           border-radius: 10px;
+          </string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>user-placeholder.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="imgpathButton">
+        <property name="text">
+         <string>Chọn ảnh</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="excelButton">
+        <property name="text">
+         <string>Excel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addButton">
+        <property name="text">
+         <string>Thêm</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="fixButton">
+        <property name="text">
+         <string>Sửa</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteButton">
+        <property name="text">
+         <string>Xóa</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="customerTable">
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>110</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Mã KH</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Họ và tên</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Số điện thoại</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Email</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Địa chỉ</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Ảnh</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Ngày đăng ký</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

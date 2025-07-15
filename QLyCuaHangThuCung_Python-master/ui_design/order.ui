@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1232</width>
+    <height>651</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Order Management System</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow {
+        background-color: #fef8ec;
+    }
+    QPushButton {
+        background-color: #a0c9c3;
+        color: #333;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    QPushButton:hover {
+        background-color: #657d81;
+		color: white;
+    }
+    QTableWidget {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    QTableWidget::item {
+        padding: 4px;
+    }
+    QLabel {
+        font-size: 14px;
+        color: #333;
+    }
+    QDateEdit, QSpinBox {
+        padding: 4px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page_order_list">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="groupBox_filters">
+          <property name="title">
+           <string>Tìm kiếm</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_date_from">
+             <property name="text">
+              <string>From Date:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QDateEdit" name="dateEdit_from"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_date_to">
+             <property name="text">
+              <string>To Date:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QDateEdit" name="dateEdit_to"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_price_from">
+             <property name="text">
+              <string>Price From:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox_price_from">
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_price_to">
+             <property name="text">
+              <string>Price To:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QSpinBox" name="spinBox_price_to">
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="pushButton_create_order">
+            <property name="text">
+             <string>Tạo đơn hàng</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_view_details">
+            <property name="text">
+             <string>Xem chi tiết đơn hàng</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget_orders">
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Mã DH</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Mã KH</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Mã NV</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Ngày đặt </string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Tổng tiền</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Trạng thái</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_create_order">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QTableWidget" name="tableWidget_product">
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>Mã SP</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Tên sản phẩm</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Ảnh</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Mô tả</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Giá</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Loại</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tableWidget_menu">
+              <column>
+               <property name="text">
+                <string>Mã SP</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Tên sản phẩm</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Ảnh</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Số Lượng</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Mô tả</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Loại</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_quantity">
+            <property name="text">
+             <string>Nhập số lượng:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLineEdit" name="lineEdit_quantity"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="updateSLButton">
+              <property name="text">
+               <string>Cập nhật số lượng</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="pushButton_add_to_order">
+              <property name="text">
+               <string>Thêm vào hóa đơn</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_payment">
+              <property name="text">
+               <string>Thanh toán</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_print">
+              <property name="text">
+               <string>Xuất hóa đơn</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_total">
+            <property name="text">
+             <string>Tổng tiền: 0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_order_details">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_order_details">
+          <property name="styleSheet">
+           <string>font-size: 18px; font-weight: bold; margin: 10px;</string>
+          </property>
+          <property name="text">
+           <string>Chi tiết đơn hàng</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableWidget_order_details">
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Mã DH</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Mã SP</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Số Lượng</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Đơn Giá</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Thành Tiền</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="backButton">
+          <property name="text">
+           <string>Quay lại </string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources.qrc">
+            <normaloff>:/Icons/left-arrow.png</normaloff>:/Icons/left-arrow.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShoppingCart</class>
+ <widget class="QWidget" name="ShoppingCart">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>931</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Shopping Cart</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+      background-color: #fef8ec;
+      font-family: Arial;
+    }
+    QLabel {
+      color: #333333;
+    }
+    QGroupBox {
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    QTableWidget {
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    QTableWidget::item {
+      padding: 8px;
+    }
+    QHeaderView::section {
+      background-color: #f8f8f8;
+      padding: 8px;
+      border: none;
+      font-weight: bold;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>20</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>24</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       color: #2c3e50;
+       margin-bottom: 20px;
+      </string>
+     </property>
+     <property name="text">
+      <string>Shopping Cart</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="cartTable">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       QTableWidget {
+         gridline-color: #e0e0e0;
+       }
+      </string>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Product Image</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Product Title</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Price</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantity</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Total</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Order Details</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="couponLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Số lượng:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #ffffff;        /* Màu nền */
+    border: 2px solid #e0e0e0;       /* Đường viền */
+    border-radius: 6px;              /* Bo góc */
+    padding: 6px;                    /* Khoảng cách bên trong */
+    font-size: 14px;                 /* Cỡ chữ */
+    color: #333333;                  /* Màu chữ */
+}
+
+QLineEdit:focus {
+    border: 2px solid #4a90e2;       /* Đổi màu viền khi focus */
+    outline: none;                   /* Xóa outline mặc định */
+}
+
+QLineEdit:hover {
+    border: 2px solid #bdbdbd;       /* Đổi màu viền khi di chuột */
+}
+
+QLineEdit:disabled {
+    background-color: #f0f0f0;       /* Màu nền khi bị vô hiệu */
+    color: #aaaaaa;                  /* Màu chữ khi bị vô hiệu */
+}
+
+/* Tùy chỉnh placeholder (cần Qt 5.2 trở lên) */
+QLineEdit[placeholderText]:empty:focus:before {
+    color: #999999;                  /* Màu placeholder */
+    content: attr(placeholderText);  /* Hiển thị placeholder */
+}
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Nhập số lượng..</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="updateCartButton">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QPushButton {
+           background-color: #40cc92;
+           color: white;
+           border-radius: 6px;
+           font-weight: bold;
+         }
+         QPushButton:hover {
+           background-color: #38b481;
+         }
+         QPushButton:pressed {
+           background-color: #219a52;
+         }
+        </string>
+       </property>
+       <property name="text">
+        <string>  Cập nhật giỏ hàng  </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="deleteButton">
+       <property name="minimumSize">
+        <size>
+         <width>133</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QPushButton {
+           background-color: #e2b4b7;
+           color: white;
+           border-radius: 6px;
+           font-weight: bold;
+         }
+         QPushButton:hover {
+           background-color: #bd637e;
+         }
+         QPushButton:pressed {
+           background-color: #219a52;
+         }
+        </string>
+       </property>
+       <property name="text">
+        <string>Xóa </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="totalLayout">
+     <item>
+      <widget class="QPushButton" name="returnButton">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QPushButton {
+           background-color: transparent;
+           color: #3498db;
+           border: none;
+           font-weight: bold;
+         }
+         QPushButton:hover {
+           color: #2980b9;
+         }
+        </string>
+       </property>
+       <property name="text">
+        <string>Quay lại</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/Icons/left-arrow.png</normaloff>:/Icons/left-arrow.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="cartTotalsBox">
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QGroupBox {
+           font-weight: bold;
+           font-size: 16px;
+         }
+        </string>
+       </property>
+       <property name="title">
+        <string>Cart Totals</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="subtotalLayout">
+          <item>
+           <widget class="QLabel" name="subtotalLabel">
+            <property name="styleSheet">
+             <string notr="true">font-size: 14px;</string>
+            </property>
+            <property name="text">
+             <string>Subtotal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="subtotalValue">
+            <property name="styleSheet">
+             <string notr="true">
+              font-size: 14px;
+              font-weight: bold;
+             </string>
+            </property>
+            <property name="text">
+             <string>$50.00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QFrame" name="line">
+          <property name="styleSheet">
+           <string notr="true">background-color: #e0e0e0;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::HLine</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="totalPriceLayout">
+          <item>
+           <widget class="QLabel" name="totalLabel">
+            <property name="styleSheet">
+             <string notr="true">
+              font-size: 16px;
+              font-weight: bold;
+             </string>
+            </property>
+            <property name="text">
+             <string>Total</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="totalValue">
+            <property name="styleSheet">
+             <string notr="true">
+              font-size: 16px;
+              font-weight: bold;
+              color: #2ecc71;
+             </string>
+            </property>
+            <property name="text">
+             <string>$50.00</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="checkoutButton">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>45</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+            QPushButton {
+              background-color: #e74f44;
+              color: white;
+              border-radius: 6px;
+              font-size: 14px;
+              font-weight: bold;
+            }
+            QPushButton:hover {
+              background-color: #c0392b;
+            }
+            QPushButton:pressed {
+              background-color: #a93226;
+            }
+           </string>
+          </property>
+          <property name="text">
+           <string>Thanh toán</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

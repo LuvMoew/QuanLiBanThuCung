@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>953</width>
+    <height>767</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sign in to Dribbble</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> QMainWindow {
+        background-color: #fef8ec;
+    }
+    QLabel#titleLabel {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333;
+    }
+    QLabel#subtitleLabel {
+        font-size: 16px;
+        color: #666666;
+    }
+    QLineEdit {
+        padding: 12px;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        background-color: #ffffff;
+        font-size: 14px;
+    }
+    QPushButton#googleButton {
+        padding: 12px;
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    QPushButton#signInButton {
+        padding: 12px;
+        background-color: #ea4c89;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    QPushButton#forgotPasswordButton {
+        color: #4285f4;
+        border: none;
+        background: none;
+        text-decoration: underline;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="leftPanel" native="true">
+      <property name="styleSheet">
+       <string notr="true">background-color: #fac7cb;</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Papyrus</family>
+           <pointsize>18</pointsize>
+           <italic>false</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Pet Shop</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="titleLabel">
+         <property name="font">
+          <font>
+           <family>Arial Rounded MT Bold</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #333;</string>
+         </property>
+         <property name="text">
+          <string>WELCOME 
+Thiên đường thú cưng!</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="illustrationLabel">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resources.qrc">:/Icons/petlogoshop.jpeg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="rightPanel" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="signInLabel">
+         <property name="font">
+          <font>
+           <family>MS Sans Serif</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">text-align: left;
+color: #333;</string>
+         </property>
+         <property name="text">
+          <string>Sign in to Dribbble</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="googleButton">
+         <property name="text">
+          <string>Sign in with Google</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="orLabel">
+         <property name="font">
+          <font>
+           <family>MS UI Gothic</family>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Or</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="usernameInput">
+         <property name="placeholderText">
+          <string>Username or Email Address</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="passwordInput">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="forgotPasswordButton">
+         <property name="text">
+          <string>Forgot password?</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="signInButton">
+         <property name="text">
+          <string>Sign In</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="signUpLabel">
+         <property name="font">
+          <font>
+           <pointsize>8</pointsize>
+           <underline>true</underline>
+          </font>
+         </property>
+         <property name="text">
+          <string>Not a member? Sign up now</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
